@@ -52,8 +52,17 @@ Here are the port bindings:
     name: https
 ```
 
-In order to clean all the resources, run the below script that will delete all the NGINX Plus resources as well as the secret resource that we created. 
+# Test the IC 
+This is done by running the below script which applies a yaml file from an Example in nginxinc repository. In this example we configure load balancing with TLS termination for a simple web application using the VirtualServer resource. The application, called cafe, lets you get either tea via the tea service or coffee via the coffee service. You indicate your drink preference with the URI of your HTTP request: URIs ending with /tea get you tea and URIs ending with /coffee get you coffee.
+
+```
+bash test.sh
+```
+
+Once you are done and want to clean all the resources, run the below script that will delete all the NGINX Plus resources as well as the secret resource that we created. 
 
 ```
 bash clean.sh
 ```
+
+
