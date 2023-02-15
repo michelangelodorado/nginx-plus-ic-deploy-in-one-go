@@ -1,6 +1,6 @@
 # nginx-plus-ic
 
-Deploy NGINX PLUS Ingress Controller in one go. 
+Deploy and test an NGINX Plus Ingress Controller in one go!
 
 Open up your terminal application.
 Type the following command and press Enter:
