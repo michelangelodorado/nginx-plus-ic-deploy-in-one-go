@@ -34,6 +34,7 @@ kubectl get pods -n nginx-ingress
 In order to get access to the Ingress Controller, A NodePort Service was also created for the Ingress Controller Pods. 
 Here are the port bindings: 
 
+```
   - port: 80
     nodePort: 30080
     targetPort: 80
@@ -49,7 +50,7 @@ Here are the port bindings:
     targetPort: 443
     protocol: TCP
     name: https
-
+```
 
 In order to clean all the resources, run the below script that will delete all the NGINX Plus resources as well as the secret resource that we created. 
 
