@@ -24,6 +24,13 @@ And it will ask you for a JWT token obtained from NGINX in order for your to Dep
 We are using the NGINX IC Plus JWT token in a Docker Config Secret. 
 This script does it for us wherein it will create a docker-registry secret on the cluster using the JWT token as the username (secret is named as "regcred" and it was added to the NGINX Plus IC deployment spec). 
 
+
+Make sure that the nginx-ingress pod is up and running by executing the below: 
+```
+kubectl get pods -n nginx-ingress
+```
+
+
 In order to get access to the Ingress Controller, A NodePort Service was also created for the Ingress Controller Pods. 
 Here are the port bindings: 
 
