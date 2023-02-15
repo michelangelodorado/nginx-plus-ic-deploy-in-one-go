@@ -1,1 +1,51 @@
 # nginx-plus-ic
+
+Deploy NGINX PLUS Ingress Controller in one go. 
+
+Open up your terminal application.
+Type the following command and press Enter:
+```
+git clone https://github.com/ericausente/nginx-plus-ic.git
+```
+
+Once the cloning process is complete, type the following command and press Enter. 
+This will change your current working directory to the newly cloned repository.
+```
+cd nginx-plus-ic
+```
+You should now be in the nginx-plus-ic directory and ready to start working with it. Run the script: 
+```
+bash script.sh
+```
+
+This Configures RBAC, Creates Common Resources and Custom Resources 
+And it will ask you for a JWT token obtained from NGINX in order for your to Deploy the Ingress Controller
+
+We are using the NGINX IC Plus JWT token in a Docker Config Secret. 
+This script does it for us wherein it will create a docker-registry secret on the cluster using the JWT token as the username (secret is named as "regcred" and it was added to the NGINX Plus IC deployment spec). 
+
+In order to get access to the Ingress Controller, A NodePort Service was also created for the Ingress Controller Pods. 
+Here are the port bindings: 
+
+  - port: 80
+    nodePort: 30080
+    targetPort: 80
+    protocol: TCP
+    name: http
+  - port: 8081
+    nodePort: 30081
+    targetPort: 8081
+    protocol: TCP
+    name: health
+  - port: 443
+    nodePort: 30443
+    targetPort: 443
+    protocol: TCP
+    name: https
+
+
+In order to clean all the resources, run the below script that will delete all the NGINX Plus resources as well as the secret resource that we created. 
+
+```
+bash clean.sh
+```
