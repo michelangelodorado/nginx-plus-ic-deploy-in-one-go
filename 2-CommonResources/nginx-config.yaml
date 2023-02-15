@@ -4,7 +4,7 @@ metadata:
   name: nginx-config
   namespace: nginx-ingress
 data:
-  proxy-protocol: "True"
+  # proxy-protocol: "True"
   ## this is hidden due to already set by default. Setting it here will result in duplication and cause the pod to die.
-  real-ip-header: "proxy_protocol"
-  set-real-ip-from: "0.0.0.0/0"
+  # real-ip-header: "proxy_protocol"
+  # set-real-ip-from: "0.0.0.0/0"
