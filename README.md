@@ -5,7 +5,7 @@
 
 This lab reproduction project is intended for educational and testing purposes only, and is not suitable for production environments. It is designed to help users experiment with and learn about specific software technologies and tools.
 
-This project has been tested with Kubernetes version 1.25.4 and NGINX Ingress Controller 3.1.0, and may not be compatible with other versions of these tools. Users should test the project on their own environment and version of the tools before using it.
+This project has been tested with Kubernetes version 1.25.4 and NGINX Ingress Controller 3.0.0, and may not be compatible with other versions of these tools. Users should test the project on their own environment and version of the tools before using it.
 
 Please be aware that this project is a work in progress, and may have known issues, missing features, or experimental components. We cannot guarantee that it will work perfectly or meet your specific needs.
 
