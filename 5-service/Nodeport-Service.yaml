@@ -4,7 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: nginx-ingress
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     nodePort: 30080
